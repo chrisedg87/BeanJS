@@ -1,0 +1,58 @@
+{
+  "name": "mysql-node-framework",
+  "description": "Node MySQL Framework",
+  "version": "0.0.1",
+  "author": "Chris Edgington",
+  "engines": {
+    "node": "4.2.x",
+    "npm": ".4.x"
+  },
+  "scripts": {
+    "start": "grunt",
+    "test": "grunt test",
+    "postinstall": "bower install --config.interactive=false"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "bookshelf": "^0.9.1",
+    "chalk": "^1.1.1",
+    "checkit": "^0.6.0",
+    "checksum": "^0.1.1",
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.13.3",
+    "glob": "^6.0.1",
+    "helmet": "^0.15.0",
+    "knex": "^0.9.0",
+    "lodash": "^3.10.1",
+    "morgan": "^1.6.1",
+    "mysql": "^2.9.0",
+    "serve-static": "^1.10.0",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "supertest": "*",
+    "should": "*",
+    "grunt-env": "*",
+    "grunt-node-inspector": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-ng-annotate": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-nodemon": "*",
+    "grunt-concurrent": "*",
+    "grunt-mocha-test": "*",
+    "grunt-karma": "*",
+    "load-grunt-tasks": "*",
+    "karma": "*",
+    "karma-jasmine": "*",
+    "karma-coverage": "*",
+    "karma-chrome-launcher": "*",
+    "karma-firefox-launcher": "*",
+    "karma-phantomjs-launcher": "*",
+    "phantomjs": "*",
+    "jasmine-core": "*"
+  },
+  "main": "server.js"
+}

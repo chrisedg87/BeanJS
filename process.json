@@ -1,0 +1,11 @@
+{
+	"apps": [{
+		"name"		:	"mysql-node-framework",
+		"script" 	:	"server.js",
+		"cwd"		:	"/var/node/mysql-node-framework",
+		"env": {
+			"NODE_ENV" : "production"
+		},
+		"exec_mode"	: 	"cluster"
+	}]
+}

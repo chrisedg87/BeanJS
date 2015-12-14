@@ -1,0 +1,3 @@
+<ul class="nav navbar-nav">
+	<li ng-repeat="item in menuItems | orderBy:'position'" ng-class="isActive('/{{item.name}}')"><a href="{{item.url}}" data-ng-bind="item.name"></a></li>
+</ul>

@@ -1,0 +1,11 @@
+.DS_Store
+.nodemonignore
+.sass-cache/
+npm-debug.log
+node_modules/
+public/lib
+.bower-*/
+.idea/
+test.js
+app/config/env/development.js
+app/config/env/production.js
