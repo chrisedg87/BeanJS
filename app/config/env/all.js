@@ -2,7 +2,7 @@
 
 module.exports = {
 	app: {
-		title: 'Node MySQL Framework',
+		title: 'BeanJS',
 		description: 'Node MySQL Framework'
 	},
     ssl: false,
