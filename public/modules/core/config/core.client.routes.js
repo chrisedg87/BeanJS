@@ -10,6 +10,9 @@ angular.module('core').config(['$routeProvider', '$httpProvider',
 		when('/', {
 			controller: 'HomeController',
 			templateUrl: 'modules/core/views/home.client.view.html'
+		}).
+		otherwise({
+			redirectTo: '/'
 		});
 	}
 ]);

@@ -11,18 +11,16 @@ var errorHandler = require('./errors.server.controller'),
  * Create a Article
  */
 exports.create = function(req, res) {
+	console.log(req.body);
 	var article = new Article(req.body);
 	article.user = req.user;
 
-	article.save(function(err) {
-		if (err) {
-			return res.status(400).send({
-				message: errorHandler.getErrorMessage(err)
-			});
-		} else {
-			res.jsonp(article);
-		}
+	article.save().then(function(article){
+		res.jsonp(article);
+	}).catch(function(error){
+		res.jsonp(error);
 	});
+	
 };
 
 /**
@@ -73,14 +71,10 @@ exports.delete = function(req, res) {
  * List of Articles
  */
 exports.list = function(req, res) { 
-	Article.find().sort('-created').populate('user', 'displayName').exec(function(err, articles) {
-		if (err) {
-			return res.status(400).send({
-				message: errorHandler.getErrorMessage(err)
-			});
-		} else {
-			res.jsonp(articles);
-		}
+	Article.forge().fetchAll().then(function(articles){
+		res.jsonp(articles);
+	}).catch(function(error){
+		res.jsonp(error);
 	});
 };
 

@@ -3,7 +3,7 @@
 angular.module('core').controller('HeaderController', ['$rootScope','$location','$scope','Menus','$timeout',
     function($rootScope,$location,$scope,Menus,$timeout) {
 
-        $scope.menuItems = Menus.getMenuItems();
+        $scope.menu = Menus.getMenu('topbar');
     	 
         $scope.isActive = function(path){
         	var linkPath = path.toLowerCase();

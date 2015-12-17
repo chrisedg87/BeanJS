@@ -3,17 +3,17 @@
         <h1>Articles</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
+        <a data-ng-repeat="article in articles" data-ng-href="#/articles/{{article.id}}" class="list-group-item">
 			<small class="list-group-item-text">
 				Posted on
 				<span data-ng-bind="article.created | date:'medium'"></span>
 				by
 				<span data-ng-bind="article.user.displayName"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="article.name"></h4>
+			<h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!articles.$resolved || articles.length">
-    	No Articles yet, why don't you <a href="/#!/articles/create">create one</a>?
+    	No Articles yet, why don't you <a href="/#/articles/create">create one</a>?
     </div>
 </section>

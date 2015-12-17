@@ -1,15 +1,17 @@
 'use strict';
 
 // Articles controller
-angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
-	function($scope, $stateParams, $location, Authentication, Articles) {
-		$scope.authentication = Authentication;
+angular.module('articles').controller('ArticlesController', ['$scope', '$routeParams', '$location', 'Articles',
+	function($scope, $routeParams, $location, Articles) {
+		//$scope.authentication = Authentication;
 
 		// Create new Article
 		$scope.create = function() {
+			console.log('Create');
 			// Create new Article object
 			var article = new Articles ({
-				name: this.name
+				title: this.title,
+				content: this.content
 			});
 
 			// Redirect after save
@@ -53,6 +55,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 
 		// Find a list of Articles
 		$scope.find = function() {
+			console.log('Article find');
 			$scope.articles = Articles.query();
 		};
 
