@@ -7,7 +7,6 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$routePa
 
 		// Create new Article
 		$scope.create = function() {
-			console.log('Create');
 			// Create new Article object
 			var article = new Articles ({
 				title: this.title,
@@ -16,7 +15,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$routePa
 
 			// Redirect after save
 			article.$save(function(response) {
-				$location.path('articles/' + response._id);
+				$location.path('articles/' + response.id);
 
 				// Clear form fields
 				$scope.name = '';
@@ -47,7 +46,8 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$routePa
 			var article = $scope.article;
 
 			article.$update(function() {
-				$location.path('articles/' + article._id);
+				console.log('update ok');
+				$location.path('articles/' + article.id);
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
@@ -62,7 +62,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$routePa
 		// Find existing Article
 		$scope.findOne = function() {
 			$scope.article = Articles.get({ 
-				articleId: $stateParams.articleId
+				articleId: $routeParams.articleId
 			});
 		};
 	}
