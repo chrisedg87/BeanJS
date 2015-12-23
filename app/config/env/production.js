@@ -3,11 +3,11 @@
 module.exports = {
 	db: {
 		connection: {
-	    	host: 'localhost',
-			user: 'works_servers',
-			password: 'iScada12',
-			database: 'works_servers',
-	    	charset: 'utf8'		
+	    	host: 'db_host',
+			user: 'db_user',
+			password: 'db_pass',
+			database: 'db_name',
+	    	charset: 'utf8'			
 		},
 		client: 'mysql',
 		pool: {
