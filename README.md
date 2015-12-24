@@ -1,3 +1,59 @@
-# BeanJS
-BeanJS is a framework for using Node and MySQL. Built using Bookshelf, Express Angular and Node. 
-Very early in development. Inspired by the superb [MeanJS](https://github.com/meanjs/mean).
+[![BeanJS Logo](https://raw.githubusercontent.com/chrisedg87/BeanJS/master/public/modules/core/img/BeanJS-full-small.png)](http://github.com/chrisedg87/beanjs)
+BeanJS is a full stack open source framework for using SQL with Node. BeanJS is build on the very powerful Bookshelf.js. Inspired by the superb [MeanJS](https://github.com/meanjs/mean).
+
+MeanJS is a great project and throughly recommended, however using a NoSQL solution isn't always the best option which is where this framework comes in. 
+
+BeanJS is extremely lightweight and ideal for getting small projects off the ground quickly without all the initial baggage found in other frameworks. 
+
+## Before You Begin 
+Read about the building blocks for the BeanJS application: 
+* Bookshelf.JS - Go through [Bookshelf.js Official Website](http://bookshelfjs.org/) and look at their API documentation.
+* Express - The best way to understand express is through its [Official Website](http://expressjs.com/), particularly [The Express Guide](http://expressjs.com/guide.html); you can also go through this [StackOverflow Thread](http://stackoverflow.com/questions/8144214/learning-express-for-node-js) for more resources.
+* AngularJS - Angular's [Official Website](http://angularjs.org/) is a great starting point. You can also use [Thinkster Popular Guide](http://www.thinkster.io/), and the [Egghead Videos](https://egghead.io/).
+* Node.js - Start by going through [Node.js Official Website](http://nodejs.org/) and this [StackOverflow Thread](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js), which should get you going with the Node.js platform in no time.
+
+## Prerequisites
+Make sure you have installed all these prerequisites on your development machine.
+* Node.js - [Download & Install Node.js](http://www.nodejs.org/download/) and the npm package manager, if you encounter any problems, you can also use this [Github Gist](https://gist.github.com/isaacs/579814) to install Node.js.
+* Postgres / mySQL / any SQL engine - Install your required database engine and checkout later how to set it up
+* Bower - You're going to use the [Bower Package Manager](http://bower.io/) to manage your front-end packages, in order to install it make sure you've installed Node.js and npm, then install bower globally using npm:
+
+```
+$ npm install -g bower
+```
+
+* Grunt - You're going to use the [Grunt Task Runner](http://gruntjs.com/) to automate your development process, in order to install it make sure you've installed Node.js and npm, then install grunt globally using npm:
+
+```
+$ sudo npm install -g grunt-cli
+```
+
+## Quick Install
+The first thing you should do is install the Node.js dependencies. The boilerplate comes pre-bundled with a package.json file that contains the list of modules you need to start your application, to learn more about the modules installed visit the NPM & Package.json section.
+
+To install Node.js dependencies you're going to use npm again, in the application folder run this in the command-line:
+
+```
+$ npm install
+```
+
+## Configure your DB engine
+
+BeanJS is relational database agnostic but there is a couple off steps that needs to be done for your particular Database Engine:
+
+First Edit your configs files in /app/config/env  (development.js,production.js and test.js needs to be edited).
+
+Then configure your database engine with the same settings and your are all set ready to go.
+
+## Running Your Application
+After the install process is over, you'll be able to run your application using Grunt, just run grunt default task:
+
+```
+$ grunt
+```
+
+Your application should run on the 3000 port so in your browser just go to [http://localhost:3000](http://localhost:3000)
+
+## Contribution
+
+This project is still fairly early in development so we're always looking for contributions!
