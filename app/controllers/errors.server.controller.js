@@ -21,13 +21,17 @@ var getUniqueErrorMessage = function(err) {
  * Get the error message from error object
  */
 exports.getErrorMessage = function(err) {
+
 	var message = '';
 
-	if (err.code) {
-		switch (err.code) {
+	if (err.errno) {
+		switch (err.errno) {
 			case 11000:
 			case 11001:
 				message = getUniqueErrorMessage(err);
+				break;
+			case 1054:
+				message = 'Invalid field';	
 				break;
 			default:
 				message = 'Something went wrong';

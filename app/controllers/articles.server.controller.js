@@ -17,7 +17,7 @@ exports.create = function(req, res) {
 		res.jsonp(article);
 	}).catch(function(err){
 		return res.status(400).send({
-			message: err
+			message: errorHandler.getErrorMessage(err)
 		});	
 	});
 	
@@ -46,7 +46,7 @@ exports.update = function(req, res) {
 	}).
 	catch(function(err){
 		return res.status(400).send({
-			message: err
+			message: errorHandler.getErrorMessage(err)
 		});	
 	});
 
@@ -66,7 +66,7 @@ exports.delete = function(req, res) {
 	}).
 	catch(function(err){
 		return res.status(400).send({
-			message: err
+			message: errorHandler.getErrorMessage(err)
 		});	
 	});
 };

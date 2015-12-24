@@ -2,15 +2,16 @@
 
 BeanJS is a full stack open source framework for using SQL with Node. BeanJS is build on the very powerful Bookshelf.js. Inspired by the superb [MeanJS](https://github.com/meanjs/mean).
 
-MeanJS is a great project and throughly recommended, however using a NoSQL solution isn't always the best option which is where this framework comes in. 
+MeanJS is a great project and thoroughly recommended, however using a NoSQL solution isn't always the best option which is where this framework comes in. 
 
 BeanJS is extremely lightweight and ideal for getting small projects off the ground quickly without all the initial baggage found in other frameworks. 
 
-It also uses the powerful Knex query builder so you don't to worry about configuring your database schema manually! The Knex migration tools will take care of all of this for you through the Yo generator, however at present this is still in development. 
+It uses the powerful Knex query builder so you don't to worry about configuring your database schema manually! The Knex migration tools will take care of all this for you through the Yo generator, however at present this is still in development. 
 
 ## Before You Begin 
 Read about the building blocks for the BeanJS application: 
 * Bookshelf.JS - Go through [Bookshelf.js Official Website](http://bookshelfjs.org/) and look at their API documentation.
+* Knex - It may also be good to get familiar with the [Knex Query Builder](http://knexjs.org/) as this will help with the migration scripts.
 * Express - The best way to understand express is through its [Official Website](http://expressjs.com/), particularly [The Express Guide](http://expressjs.com/guide.html); you can also go through this [StackOverflow Thread](http://stackoverflow.com/questions/8144214/learning-express-for-node-js) for more resources.
 * AngularJS - Angular's [Official Website](http://angularjs.org/) is a great starting point. You can also use [Thinkster Popular Guide](http://www.thinkster.io/), and the [Egghead Videos](https://egghead.io/).
 * Node.js - Start by going through [Node.js Official Website](http://nodejs.org/) and this [StackOverflow Thread](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js), which should get you going with the Node.js platform in no time.
@@ -31,6 +32,12 @@ $ npm install -g bower
 $ sudo npm install -g grunt-cli
 ```
 
+* Knex - Install Knex globally in order to make use of the migration scripts for generating your SQL Schema.
+
+```
+$ sudo npm install -g knex
+```
+
 ## Quick Install
 The first thing you should do is install the Node.js dependencies. The boilerplate comes pre-bundled with a package.json file that contains the list of modules you need to start your application, to learn more about the modules installed visit the NPM & Package.json section.
 
@@ -44,12 +51,11 @@ $ npm install
 
 BeanJS is relational database agnostic but there is a couple off steps that needs to be done for your particular Database Engine:
 
-First Edit your configs files in /app/config/env  (development.js,production.js and test.js needs to be edited).
+First Edit your config files in /app/config/env  (development.js,production.js and test.js needs to be edited).
 
-Eventually the Database config will be handled through Yo but for now Knex can be used manually. 
+Finally use Knex to generate the example module. 
 
 ```
-$ sudo npm install -g knex
 $ knex migrate:latest
 ```
 
