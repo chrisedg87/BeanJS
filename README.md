@@ -1,4 +1,5 @@
 [![BeanJS Logo](https://raw.githubusercontent.com/chrisedg87/BeanJS/master/public/modules/core/img/BeanJS-full-small.png)](http://github.com/chrisedg87/beanjs)
+
 BeanJS is a full stack open source framework for using SQL with Node. BeanJS is build on the very powerful Bookshelf.js. Inspired by the superb [MeanJS](https://github.com/meanjs/mean).
 
 MeanJS is a great project and throughly recommended, however using a NoSQL solution isn't always the best option which is where this framework comes in. 
