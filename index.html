@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Beanjs by chrisedg87</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Beanjs</h1>
+      <h2 class="project-tagline">Javascript framework with Bookshelf, Express, AngularJS and Node</h2>
+      <a href="https://github.com/chrisedg87/BeanJS" class="btn">View on GitHub</a>
+      <a href="https://github.com/chrisedg87/BeanJS/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/chrisedg87/BeanJS/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>BeanJS is a full stack open source framework for using SQL with Node. BeanJS is build on the very powerful Bookshelf.js. Inspired by the superb <a href="https://github.com/meanjs/mean">MeanJS</a>.</p>
+
+<p>MeanJS is a great project and throughly recommended, however using a NoSQL solution isn't always the best option which is where this framework comes in. </p>
+
+<p>BeanJS is extremely lightweight and ideal for getting small projects off the ground quickly without all the initial baggage found in other frameworks. </p>
+
+<h2>
+<a id="before-you-begin" class="anchor" href="#before-you-begin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Before You Begin</h2>
+
+<p>Read about the building blocks for the BeanJS application: </p>
+
+<ul>
+<li>Bookshelf.JS - Go through <a href="http://bookshelfjs.org/">Bookshelf.js Official Website</a> and look at their API documentation.</li>
+<li>Express - The best way to understand express is through its <a href="http://expressjs.com/">Official Website</a>, particularly <a href="http://expressjs.com/guide.html">The Express Guide</a>; you can also go through this <a href="http://stackoverflow.com/questions/8144214/learning-express-for-node-js">StackOverflow Thread</a> for more resources.</li>
+<li>AngularJS - Angular's <a href="http://angularjs.org/">Official Website</a> is a great starting point. You can also use <a href="http://www.thinkster.io/">Thinkster Popular Guide</a>, and the <a href="https://egghead.io/">Egghead Videos</a>.</li>
+<li>Node.js - Start by going through <a href="http://nodejs.org/">Node.js Official Website</a> and this <a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js">StackOverflow Thread</a>, which should get you going with the Node.js platform in no time.</li>
+</ul>
+
+<h2>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h2>
+
+<p>Make sure you have installed all these prerequisites on your development machine.</p>
+
+<ul>
+<li>Node.js - <a href="http://www.nodejs.org/download/">Download &amp; Install Node.js</a> and the npm package manager, if you encounter any problems, you can also use this <a href="https://gist.github.com/isaacs/579814">Github Gist</a> to install Node.js.</li>
+<li>Postgres / mySQL / any SQL engine - Install your required database engine and checkout later how to set it up</li>
+<li>Bower - You're going to use the <a href="http://bower.io/">Bower Package Manager</a> to manage your front-end packages, in order to install it make sure you've installed Node.js and npm, then install bower globally using npm:</li>
+</ul>
+
+<pre><code>$ npm install -g bower
+</code></pre>
+
+<ul>
+<li>Grunt - You're going to use the <a href="http://gruntjs.com/">Grunt Task Runner</a> to automate your development process, in order to install it make sure you've installed Node.js and npm, then install grunt globally using npm:</li>
+</ul>
+
+<pre><code>$ sudo npm install -g grunt-cli
+</code></pre>
+
+<h2>
+<a id="quick-install" class="anchor" href="#quick-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Install</h2>
+
+<p>The first thing you should do is install the Node.js dependencies. The boilerplate comes pre-bundled with a package.json file that contains the list of modules you need to start your application, to learn more about the modules installed visit the NPM &amp; Package.json section.</p>
+
+<p>To install Node.js dependencies you're going to use npm again, in the application folder run this in the command-line:</p>
+
+<pre><code>$ npm install
+</code></pre>
+
+<h2>
+<a id="configure-your-db-engine" class="anchor" href="#configure-your-db-engine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configure your DB engine</h2>
+
+<p>BeanJS is relational database agnostic but there is a couple off steps that needs to be done for your particular Database Engine:</p>
+
+<p>First Edit your configs files in /app/config/env  (development.js,production.js and test.js needs to be edited).</p>
+
+<p>Then configure your database engine with the same settings and your are all set ready to go.</p>
+
+<h2>
+<a id="running-your-application" class="anchor" href="#running-your-application" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running Your Application</h2>
+
+<p>After the install process is over, you'll be able to run your application using Grunt, just run grunt default task:</p>
+
+<pre><code>$ grunt
+</code></pre>
+
+<p>Your application should run on the 3000 port so in your browser just go to <a href="http://localhost:3000">http://localhost:3000</a></p>
+
+<h2>
+<a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribution</h2>
+
+<p>This project is still fairly early in development so we're always looking for contributions!</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/chrisedg87/BeanJS">Beanjs</a> is maintained by <a href="https://github.com/chrisedg87">chrisedg87</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
