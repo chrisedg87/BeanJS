@@ -3,7 +3,7 @@
 var AppConfig = (function() {
 
 	var applicationModuleName = 'myApp';
-	var applicationVendorDependencies = ['ngResource', 'ui.bootstrap', 'ngRoute', 'ngFileUpload'];
+	var applicationVendorDependencies = ['ngResource', 'ui.bootstrap', 'ngRoute'];
 
 	var registerModule = function(name) {
 		angular.module(name, []);

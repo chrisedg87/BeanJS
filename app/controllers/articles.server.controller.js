@@ -12,12 +12,13 @@ var errorHandler = require('./errors.server.controller'),
  */
 exports.create = function(req, res) {
 	var article = new Article(req.body);
-	article.user = req.user;
 
 	article.save().then(function(article){
 		res.jsonp(article);
-	}).catch(function(error){
-		res.jsonp(error);
+	}).catch(function(err){
+		return res.status(400).send({
+			message: err
+		});	
 	});
 	
 };

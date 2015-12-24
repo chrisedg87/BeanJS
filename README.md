@@ -6,6 +6,8 @@ MeanJS is a great project and throughly recommended, however using a NoSQL solut
 
 BeanJS is extremely lightweight and ideal for getting small projects off the ground quickly without all the initial baggage found in other frameworks. 
 
+It also uses the powerful Knex query builder so you don't to worry about configuring your database schema manually! The Knex migration tools will take care of all of this for you through the Yo generator, however at present this is still in development. 
+
 ## Before You Begin 
 Read about the building blocks for the BeanJS application: 
 * Bookshelf.JS - Go through [Bookshelf.js Official Website](http://bookshelfjs.org/) and look at their API documentation.
@@ -16,7 +18,7 @@ Read about the building blocks for the BeanJS application:
 ## Prerequisites
 Make sure you have installed all these prerequisites on your development machine.
 * Node.js - [Download & Install Node.js](http://www.nodejs.org/download/) and the npm package manager, if you encounter any problems, you can also use this [Github Gist](https://gist.github.com/isaacs/579814) to install Node.js.
-* Postgres / mySQL / any SQL engine - Install your required database engine and checkout later how to set it up
+* Postgres / mySQL / any SQL engine - Install your required database engine and configure a database and user account, checkout later how to set it up
 * Bower - You're going to use the [Bower Package Manager](http://bower.io/) to manage your front-end packages, in order to install it make sure you've installed Node.js and npm, then install bower globally using npm:
 
 ```
@@ -44,7 +46,12 @@ BeanJS is relational database agnostic but there is a couple off steps that need
 
 First Edit your configs files in /app/config/env  (development.js,production.js and test.js needs to be edited).
 
-Then configure your database engine with the same settings and your are all set ready to go.
+Eventually the Database config will be handled through Yo but for now Knex can be used manually. 
+
+```
+$ sudo npm install -g knex
+$ knex migrate:latest
+```
 
 ## Running Your Application
 After the install process is over, you'll be able to run your application using Grunt, just run grunt default task:

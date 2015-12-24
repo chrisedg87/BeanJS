@@ -6,9 +6,9 @@
         <a data-ng-repeat="article in articles" data-ng-href="#/articles/{{article.id}}" class="list-group-item">
 			<small class="list-group-item-text">
 				Posted on
-				<span data-ng-bind="article.created | date:'medium'"></span>
+				<span data-ng-bind="article.created_at | date:'medium'"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
+			<h4 class="list-group-item-heading" data-ng-bind="article.name"></h4>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!articles.$resolved || articles.length">

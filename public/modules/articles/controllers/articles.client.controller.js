@@ -9,7 +9,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$routePa
 		$scope.create = function() {
 			// Create new Article object
 			var article = new Articles ({
-				title: this.title,
+				name: this.name,
 				content: this.content
 			});
 
