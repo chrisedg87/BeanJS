@@ -6,7 +6,11 @@ var express = require('express'),
 	config = require('./config'),
 	morgan = require('morgan'),
 	bodyParser = require('body-parser'),
+	session = require('express-session'),
+	SessionStore = require('express-mysql-session'),
+	cookieParser = require('cookie-parser'),
 	multipart = require('connect-multiparty'),
+	passport = require('passport'),
 	helmet = require('helmet');
 
 module.exports = function(db){
@@ -44,6 +48,24 @@ module.exports = function(db){
 		extended: true
 	}));
 	app.use(bodyParser.json());
+
+	// CookieParser should be above session
+	app.use(cookieParser());
+
+	// Express session
+	var sessionStore = new SessionStore(config.db.connection);
+
+	app.use(session({
+		key: 'beanjs',
+		secret: 'scotchyscotch',
+		store: sessionStore,
+		resave: true,
+		saveUninitialized: true
+	}));
+
+	// User Passport Session
+	app.use(passport.initialize());
+	app.use(passport.session());
 
 	// Use helmet to secure Express headers
 	app.use(helmet.xframe());

@@ -1,3 +1,7 @@
 body {
   padding-top: 70px;
 }
+
+.ng-dirty .ng-invalid {
+    background-color: #fcb5b9;
+}

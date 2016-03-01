@@ -12,10 +12,12 @@ var errorHandler = require('./errors.server.controller'),
  */
 exports.create = function(req, res) {
 	var article = new Article(req.body);
+	article.attributes.user_id = req.user.id;
 
 	article.save().then(function(article){
 		res.jsonp(article);
 	}).catch(function(err){
+		console.error(err);
 		return res.status(400).send({
 			message: errorHandler.getErrorMessage(err)
 		});	
@@ -77,7 +79,7 @@ exports.delete = function(req, res) {
 exports.list = function(req, res) { 
 	Article.
 	forge().
-	fetchAll().
+	fetchAll({withRelated: ['user']}).
 	then(function(articles){
 		res.jsonp(articles);
 	}).
@@ -92,7 +94,7 @@ exports.list = function(req, res) {
 exports.articleByID = function(req, res, next, id) { 
 	Article.
 	forge({id: id}).
-	fetch().
+	fetch({withRelated: ['user']}).
 	then(function(article){
 		req.article = article;
 		next();

@@ -12,6 +12,9 @@ if(!process.env.NODE_ENV) {
 
 var app = require('./app/config/express')();
 
+// Bootstrap passport config
+require('./app/config/passport')();
+
 // List on the correct port
 app.listen(config.port);
 

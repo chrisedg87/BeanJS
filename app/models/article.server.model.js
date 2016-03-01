@@ -7,6 +7,10 @@ var bookshelf = require('../config/db').bookshelf,
 var Article = bookshelf.Model.extend({
 	tableName: 'articles',
 
+	user: function() {
+		return this.belongsTo('User');
+	},
+
 	initialize: function() {
 		this.on('saving', this.validateSave);
 	},
@@ -18,4 +22,4 @@ var Article = bookshelf.Model.extend({
 
 });
 
-module.exports = Article;
+module.exports = bookshelf.model('Article', Article);

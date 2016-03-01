@@ -2,15 +2,16 @@
 
 module.exports = function(app) {
 	var articles = require('../../app/controllers/articles.server.controller');
+	var users = require('../../app/controllers/users.server.controller');
 
 	app.route('/articles')
 		.get(articles.list)
-		.post(articles.create);
+		.post(users.requiresLogin, articles.create);
 
 	app.route('/articles/:articleId')
 		.get(articles.read)
-		.put(articles.update)
-		.delete(articles.delete);
+		.put(users.requiresLogin, articles.update)
+		.delete(users.requiresLogin, articles.delete);
 
 	app.param('articleId', articles.articleByID);
 };

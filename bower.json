@@ -1,12 +1,16 @@
 {
-	"name": "beanjs",
-	"version": "0.0.1",
-	"description": "Javascript framework with Bookshelf, Express, AngularJS and Node",
-	"dependencies": {
-		"bootstrap": "~3",
-		"angular": "~1.4",
-		"angular-bootstrap": "~0.11.0",
-		"angular-resource": "~1.4",
-		"angular-route": "~1.4"
-	}
+  "name": "beanjs",
+  "version": "0.0.1",
+  "description": "Javascript framework with Bookshelf, Express, AngularJS and Node",
+  "dependencies": {
+    "bootstrap": "~3",
+    "angular": "~1.4",
+    "angular-bootstrap": "~0.13.0",
+    "angular-resource": "~1.4",
+    "angular-route": "~1.4",
+    "angular-file-upload": "~2.2.0",
+    "angular-ui-utils": "*",
+    "owasp-password-strength-test": "~1.3.0",
+    "angular-cookies": "~1.4"
+  }
 }
